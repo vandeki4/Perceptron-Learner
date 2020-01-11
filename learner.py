@@ -46,7 +46,7 @@ if __name__ == '__main__':
     # Iterate over each document in the train set, using a progress bar
     for document, class_num in tqdm(
             zip(train_dataset.data, train_dataset.target), 
-            total=len(test_dataset.data)):
+            total=len(train_dataset.data)):
         onehot_encoding = onehot_document(document, corpus, token_lookup)
 
         # For each of the twenty perceptrons:
